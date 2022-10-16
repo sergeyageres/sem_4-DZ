@@ -1,7 +1,6 @@
 ﻿//   Напишите метод, который принимает на вход число и выдаёт сумму цифр в числе.
 Console.WriteLine("введите число ");
 
-int sum = NewMethod();
 Console.WriteLine(sum);
 
 static int NewMethod()
@@ -13,6 +12,6 @@ static int NewMethod()
         sum = sum + a % 10;
         a = a / 10;
     }
-
     return sum;
 }
+int sum = NewMethod();
