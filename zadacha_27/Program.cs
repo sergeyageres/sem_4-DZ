@@ -1,13 +1,18 @@
-﻿//  Напишите метод, который принимает на вход число и выдаёт сумму цифр в числе.
+﻿//   Напишите метод, который принимает на вход число и выдаёт сумму цифр в числе.
+Console.WriteLine("введите число ");
 
-void ValueNumber()
+int sum = NewMethod();
+Console.WriteLine(sum);
+
+static int NewMethod()
 {
-    Console.Write("Введите любое число от 1: ");
-    int num = Convert.ToInt32(Console.ReadLine());
-    for (int i = 1; i <= num; i++)
+    int a = Convert.ToInt32(Console.ReadLine());
+    int sum = 0;
+    for (int i = 0; i <= a; i++)
     {
-        Console.Write($"{Math.Pow(i, 3)}, ");
-        Console.WriteLine(" ");
+        sum = sum + a % 10;
+        a = a / 10;
     }
+
+    return sum;
 }
-ValueNumber();
